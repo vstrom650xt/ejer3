@@ -13,7 +13,7 @@ function action(event) {
     let apellido2 = apellido2Input.value;
 
     let nuevoElemento = document.createElement("h2");
-    nuevoElemento.textContent = nombre;
+    nuevoElemento.textContent = nombre+ " " + apellido1 + " " +apellido2 + " estas caput";
     resultadoDiv.appendChild(nuevoElemento);
 }
 
