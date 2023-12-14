@@ -1,15 +1,20 @@
-const button = document.querySelector("button");
+var button = document.getElementById("button");
+var nombreInput = document.getElementById("nombreInput");
+var apellido1Input = document.getElementById("apellido1Input");
+var apellido2Input = document.getElementById("apellido2Input");
+var resultadoDiv = document.getElementById("resultado");
 
-function action() {
-    var nombreInput = document.getElementById("nombreInput");
-    var apellido1Input = document.getElementById("apellido1Input");
-    var apellido2Input = document.getElementById("apellido2Input");
 
-    var nombre = nombreInput.value;
-    var apellido1 = apellido1Input.value;
-    var apellido2 = apellido2Input.value;
+function action(event) {
+    event.preventDefault();
+    
+    let nombre = nombreInput.value;
+    let apellido1 = apellido1Input.value;
+    let apellido2 = apellido2Input.value;
 
-    var resultadoDiv = document.getElementById("resultado");
-    resultadoDiv.textContent = nombre + " " + apellido1 + " " + apellido2 + " vas a palmar ";
+    let nuevoElemento = document.createElement("h2");
+    nuevoElemento.textContent = nombre;
+    resultadoDiv.appendChild(nuevoElemento);
 }
-button.addEventListener("click", action)
+
+button.addEventListener("click", action); 

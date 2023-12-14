@@ -1,6 +1,15 @@
-.wrapper{
-
+body{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+form input {
+    margin-bottom: 10px; 
 }
